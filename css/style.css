@@ -142,15 +142,8 @@ p {
     left: 0;
     right: 0;
     z-index: 1000;
-    background: rgba(250, 247, 245, 0.95);
-    backdrop-filter: blur(8px);
+    background: var(--color-background);
     padding: var(--spacing-md) 0;
-    transition: var(--transition-medium);
-}
-
-.site-header.scrolled {
-    padding: var(--spacing-sm) 0;
-    box-shadow: 0 2px 20px rgba(74, 63, 58, 0.08);
 }
 
 .navbar {

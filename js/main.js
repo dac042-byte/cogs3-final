@@ -9,36 +9,11 @@
        DOM READY
        ============================================ */
     document.addEventListener('DOMContentLoaded', function() {
-        initHeaderScroll();
         initSmoothScroll();
         initWorkItemReveal();
         initMobileNav();
         removeLoadingState();
     });
-
-    /* ============================================
-       HEADER SCROLL EFFECT
-       Adds 'scrolled' class to header when scrolling
-       ============================================ */
-    function initHeaderScroll() {
-        const header = document.querySelector('.site-header');
-        if (!header) return;
-
-        let lastScroll = 0;
-        const scrollThreshold = 50;
-
-        window.addEventListener('scroll', function() {
-            const currentScroll = window.pageYOffset;
-
-            if (currentScroll > scrollThreshold) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-
-            lastScroll = currentScroll;
-        });
-    }
 
     /* ============================================
        SMOOTH SCROLL FOR ANCHOR LINKS
