@@ -396,7 +396,6 @@ section {
     font-size: 1.2rem;
     font-weight: 500;
     margin-bottom: var(--spacing-xs);
-    transition: var(--transition-fast);
     color: var(--color-text);
 }
 
@@ -404,10 +403,6 @@ section {
     font-size: 0.85rem;
     color: var(--color-accent);
     margin-bottom: 0;
-}
-
-.work-link:hover .work-title {
-    color: var(--color-accent-dark);
 }
 
 /* Video Work Items */
