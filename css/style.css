@@ -335,12 +335,15 @@ section {
     overflow: hidden;
     aspect-ratio: 4/3;
     background: var(--color-background);
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
 }
 
 .work-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
 /* Placeholder image styles - [REMOVE WHEN ADDING REAL IMAGES] */
@@ -745,6 +748,8 @@ section {
     border-radius: var(--radius-md);
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(61, 79, 95, 0.1);
+    position: relative;
+    aspect-ratio: 16/9;
 }
 
 .project-image-item:hover {
@@ -753,7 +758,9 @@ section {
 
 .project-image-item img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     display: block;
 }
 
