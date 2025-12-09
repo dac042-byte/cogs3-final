@@ -236,6 +236,7 @@ p {
     #ec9daa 100%)
     ;
     margin-top: -100px;
+    position: relative;
 }
 
 .hero-title {
@@ -247,6 +248,23 @@ p {
     color: black;
     text-align: center;
     margin-bottom: 0;
+}
+
+.hero-social-links {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    display: flex;
+    gap: 20px;
+}
+
+.hero-social-link {
+    color: var(--color-text);
+    font-size: 1.5rem;
+}
+
+.hero-social-link:hover {
+    color: var(--color-accent-dark);
 }
 
 .hero-subtitle {
