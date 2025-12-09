@@ -396,7 +396,6 @@ section {
     font-size: 1.2rem;
     font-weight: 500;
     margin-bottom: var(--spacing-xs);
-    transition: var(--transition-fast);
     color: var(--color-text);
 }
 
@@ -404,10 +403,6 @@ section {
     font-size: 0.85rem;
     color: var(--color-accent);
     margin-bottom: 0;
-}
-
-.work-link:hover .work-title {
-    color: var(--color-accent-dark);
 }
 
 /* Video Work Items */
@@ -782,4 +777,87 @@ section {
     background: linear-gradient(135deg, #5A7A94 0%, #7A9BB8 50%, #A8C4D9 100%);
     -webkit-background-clip: text;
     background-clip: text;
+}
+
+/* ============================================
+   PROJECT PAGE STYLES
+   ============================================ */
+.project-images-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.project-image-item {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(61, 79, 95, 0.1);
+    transition: var(--transition-medium);
+}
+
+.project-image-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(61, 79, 95, 0.15);
+}
+
+.project-image-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.back-to-work {
+    text-align: center;
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Project Video Section */
+.project-video-section {
+    margin-bottom: var(--spacing-xl);
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    box-shadow: 0 4px 20px rgba(61, 79, 95, 0.1);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* ============================================
+   SOCIAL ICON STYLES
+   ============================================ */
+.nav-link i {
+    font-size: 1.2rem;
+    transition: var(--transition-fast);
+}
+
+.nav-link:hover i {
+    transform: scale(1.1);
+}
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+@media (max-width: 768px) {
+    .project-images-grid {
+        gap: var(--spacing-md);
+    }
+
+    .works-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
 }
