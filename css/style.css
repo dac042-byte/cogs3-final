@@ -1,29 +1,36 @@
 /* ============================================
    PORTFOLIO WEBSITE - CUSTOM STYLES
-   Muted blue color scheme with gradients
+   Elaborate blue-lavender color scheme with gradients
    ============================================ */
 
 /* ============================================
    CSS VARIABLES - [CUSTOMIZE COLORS HERE]
    ============================================ */
 :root {
-    /* Muted Blue Color Palette */
-    --color-background: #F4F6F9;          /* Light grayish blue */
-    --color-background-alt: #E8EDF3;      /* Slightly darker blue-gray */
-    --color-text: #3D4F5F;                /* Muted dark blue */
-    --color-text-light: #6B7D8A;          /* Muted medium blue-gray */
-    --color-accent: #7A9BB8;              /* Muted steel blue */
-    --color-accent-light: #A8C4D9;        /* Lighter muted blue */
-    --color-accent-dark: #5A7A94;         /* Darker muted blue */
-    --color-border: #D1DAE3;              /* Light blue-gray border */
-    --color-placeholder: #C5D0DB;         /* Placeholder bg */
+    /* Elaborate Blue-Lavender Color Palette */
+    --color-background: #F8F9FC;          /* Soft lavender white */
+    --color-background-alt: #EEF1F8;      /* Light periwinkle */
+    --color-text: #2D3748;                /* Deep slate blue */
+    --color-text-light: #5A6778;          /* Soft slate */
+    --color-accent: #6B8DD6;              /* Cornflower blue */
+    --color-accent-light: #9BB5ED;        /* Light periwinkle blue */
+    --color-accent-dark: #4A6BB5;         /* Deep cornflower */
+    --color-secondary: #8B7EC8;           /* Soft purple */
+    --color-secondary-light: #B4A9DB;     /* Light lavender */
+    --color-tertiary: #5EADB0;            /* Soft teal */
+    --color-highlight: #F0C38E;           /* Warm peach accent */
+    --color-border: #D4DCE8;              /* Soft blue-gray border */
+    --color-placeholder: #C8D1E0;         /* Placeholder bg */
 
-    /* Gradient Colors */
-    --gradient-primary: linear-gradient(135deg, #7A9BB8 0%, #A8C4D9 50%, #B8CED9 100%);
-    --gradient-hero: linear-gradient(180deg, #F4F6F9 0%, #E8EDF3 50%, #D8E2EB 100%);
-    --gradient-card: linear-gradient(145deg, #FFFFFF 0%, #F0F4F8 100%);
-    --gradient-button: linear-gradient(135deg, #7A9BB8 0%, #5A7A94 100%);
-    --gradient-footer: linear-gradient(180deg, #E8EDF3 0%, #D1DAE3 100%);
+    /* Elaborate Gradient Colors */
+    --gradient-primary: linear-gradient(135deg, #6B8DD6 0%, #8B7EC8 50%, #9BB5ED 100%);
+    --gradient-hero: linear-gradient(160deg, #F8F9FC 0%, #EEF1F8 30%, #E4EAF5 60%, #DDE5F2 100%);
+    --gradient-card: linear-gradient(145deg, #FFFFFF 0%, #F5F7FB 50%, #EEF2F9 100%);
+    --gradient-button: linear-gradient(135deg, #6B8DD6 0%, #8B7EC8 50%, #4A6BB5 100%);
+    --gradient-footer: linear-gradient(180deg, #EEF1F8 0%, #E4EAF5 50%, #D4DCE8 100%);
+    --gradient-accent: linear-gradient(135deg, #5EADB0 0%, #6B8DD6 50%, #8B7EC8 100%);
+    --gradient-warm: linear-gradient(135deg, #F0C38E 0%, #E8A87C 100%);
+    --gradient-video: linear-gradient(145deg, #2D3748 0%, #3D4A5C 50%, #4A5568 100%);
 
     /* Typography - Lora from Google Fonts */
     --font-primary: 'Lora', Georgia, serif;
@@ -407,6 +414,95 @@ section {
 
 .work-link:hover .work-title {
     color: var(--color-accent-dark);
+}
+
+/* Video Work Items */
+.work-item.video-item .work-image-wrapper {
+    background: var(--gradient-video);
+}
+
+.work-video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.work-video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-video);
+    color: white;
+    height: 100%;
+    width: 100%;
+}
+
+.video-placeholder .play-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-sm);
+    box-shadow: 0 4px 20px rgba(107, 141, 214, 0.4);
+    transition: var(--transition-fast);
+}
+
+.video-placeholder .play-icon::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 18px solid white;
+    border-top: 11px solid transparent;
+    border-bottom: 11px solid transparent;
+    margin-left: 4px;
+}
+
+.work-link:hover .video-placeholder .play-icon {
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(107, 141, 214, 0.5);
+}
+
+.video-placeholder .placeholder-text {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+}
+
+.video-placeholder .placeholder-text small {
+    display: block;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.75rem;
+    margin-top: 4px;
+}
+
+/* Video badge */
+.work-type-badge {
+    position: absolute;
+    top: var(--spacing-sm);
+    left: var(--spacing-sm);
+    background: var(--gradient-warm);
+    color: var(--color-text);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: var(--radius-sm);
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* ============================================
