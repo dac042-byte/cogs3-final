@@ -1,36 +1,36 @@
 /* ============================================
    PORTFOLIO WEBSITE - CUSTOM STYLES
-   Elaborate blue-lavender color scheme with gradients
+   Warm color scheme with gradients
    ============================================ */
 
 /* ============================================
    CSS VARIABLES - [CUSTOMIZE COLORS HERE]
    ============================================ */
 :root {
-    /* Elaborate Blue-Lavender Color Palette */
-    --color-background: #F8F9FC;          /* Soft lavender white */
-    --color-background-alt: #EEF1F8;      /* Light periwinkle */
-    --color-text: #2D3748;                /* Deep slate blue */
-    --color-text-light: #5A6778;          /* Soft slate */
-    --color-accent: #6B8DD6;              /* Cornflower blue */
-    --color-accent-light: #9BB5ED;        /* Light periwinkle blue */
-    --color-accent-dark: #4A6BB5;         /* Deep cornflower */
-    --color-secondary: #8B7EC8;           /* Soft purple */
-    --color-secondary-light: #B4A9DB;     /* Light lavender */
-    --color-tertiary: #5EADB0;            /* Soft teal */
-    --color-highlight: #F0C38E;           /* Warm peach accent */
-    --color-border: #D4DCE8;              /* Soft blue-gray border */
-    --color-placeholder: #C8D1E0;         /* Placeholder bg */
+    /* Warm Color Palette */
+    --color-background: #FDF9F6;          /* Warm cream white */
+    --color-background-alt: #F7EFE8;      /* Light warm beige */
+    --color-text: #3D2E2A;                /* Warm dark brown */
+    --color-text-light: #6B5750;          /* Warm medium brown */
+    --color-accent: #D4856A;              /* Terracotta */
+    --color-accent-light: #E8A890;        /* Light coral */
+    --color-accent-dark: #B8634A;         /* Deep terracotta */
+    --color-secondary: #C9A87C;           /* Warm gold/tan */
+    --color-secondary-light: #DDBF9A;     /* Light sand */
+    --color-tertiary: #8B9F82;            /* Sage green */
+    --color-highlight: #E8C4A0;           /* Warm peach */
+    --color-border: #E5D8CE;              /* Warm beige border */
+    --color-placeholder: #D9CCC2;         /* Placeholder bg */
 
-    /* Elaborate Gradient Colors */
-    --gradient-primary: linear-gradient(135deg, #6B8DD6 0%, #8B7EC8 50%, #9BB5ED 100%);
-    --gradient-hero: linear-gradient(160deg, #F8F9FC 0%, #EEF1F8 30%, #E4EAF5 60%, #DDE5F2 100%);
-    --gradient-card: linear-gradient(145deg, #FFFFFF 0%, #F5F7FB 50%, #EEF2F9 100%);
-    --gradient-button: linear-gradient(135deg, #6B8DD6 0%, #8B7EC8 50%, #4A6BB5 100%);
-    --gradient-footer: linear-gradient(180deg, #EEF1F8 0%, #E4EAF5 50%, #D4DCE8 100%);
-    --gradient-accent: linear-gradient(135deg, #5EADB0 0%, #6B8DD6 50%, #8B7EC8 100%);
-    --gradient-warm: linear-gradient(135deg, #F0C38E 0%, #E8A87C 100%);
-    --gradient-video: linear-gradient(145deg, #2D3748 0%, #3D4A5C 50%, #4A5568 100%);
+    /* Warm Gradient Colors */
+    --gradient-primary: linear-gradient(135deg, #D4856A 0%, #C9A87C 50%, #E8A890 100%);
+    --gradient-hero: linear-gradient(160deg, #FDF9F6 0%, #F7EFE8 30%, #F0E6DC 60%, #EBE0D4 100%);
+    --gradient-card: linear-gradient(145deg, #FFFFFF 0%, #FBF7F4 50%, #F7F0EA 100%);
+    --gradient-button: linear-gradient(135deg, #D4856A 0%, #C9A87C 50%, #B8634A 100%);
+    --gradient-footer: linear-gradient(180deg, #F7EFE8 0%, #F0E6DC 50%, #E5D8CE 100%);
+    --gradient-accent: linear-gradient(135deg, #8B9F82 0%, #C9A87C 50%, #D4856A 100%);
+    --gradient-warm: linear-gradient(135deg, #E8C4A0 0%, #D4856A 100%);
+    --gradient-video: linear-gradient(145deg, #3D2E2A 0%, #5A4840 50%, #6B5750 100%);
 
     /* Typography - Lora from Google Fonts */
     --font-primary: 'Lora', Georgia, serif;
