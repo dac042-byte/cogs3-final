@@ -10,37 +10,25 @@
     /* Muted Pink & Beige Color Palette */
     --color-background: #FAF7F5;          /* Light warm beige (main page) */
     --color-background-alt: #F5F0EC;      /* Slightly darker beige */
-    --color-text: #4A3F3A;                /* Warm dark brown */
-    --color-text-light: #7A6B64;          /* Warm medium brown */
-    --color-accent: #C4A092;              /* Dusty rose/mauve */
-    --color-accent-light: #D9BFB5;        /* Light dusty pink */
-    --color-accent-dark: #A67F70;         /* Deep dusty rose */
-    --color-secondary: #C9B8A8;           /* Warm taupe */
-    --color-secondary-light: #DDD0C4;     /* Light taupe */
-    --color-tertiary: #B8A99A;            /* Muted tan */
-    --color-highlight: #E5CFC5;           /* Soft blush */
-    --color-border: #E8DED7;              /* Warm beige border */
-    --color-placeholder: #D9CEC6;         /* Placeholder bg */
-
-    /* Hero Gradient (muted pinks and beiges) */
-    --gradient-hero-main: linear-gradient(
-        145deg,
-        #E8D5CE 0%,
-        #DFC8C0 20%,
-        #E5D4CB 40%,
-        #D9C4BA 60%,
-        #E2CFC6 80%,
-        #DBBFB5 100%
-    );
+    --color-text: #000000;                /* Warm dark brown */
+    --color-text-light: #7a646b;          /* Warm medium brown */
+    --color-accent: #c492a9;              /* Dusty rose/mauve */
+    --color-accent-light: #d5b5d9;        /* Light dusty pink */
+    --color-accent-dark: #a6709c;         /* Deep dusty rose */
+    --color-secondary: #c9a8aa;           /* Warm taupe */
+    --color-secondary-light: #ddc4d1;     /* Light taupe */
+    --color-tertiary: #b89ab0;            /* Muted tan */
+    --color-highlight: #e5c5d2;           /* Soft blush */
+    --color-border: #e8d7e1;              /* Warm beige border */
+    --color-placeholder: #d9c6cc;         /* Placeholder bg */
 
     /* Other Gradients */
-    --gradient-primary: linear-gradient(135deg, #C4A092 0%, #C9B8A8 50%, #D9BFB5 100%);
-    --gradient-card: linear-gradient(145deg, #FFFFFF 0%, #FBF8F6 50%, #F7F2EF 100%);
-    --gradient-button: linear-gradient(135deg, #C4A092 0%, #B8A99A 50%, #A67F70 100%);
-    --gradient-footer: linear-gradient(180deg, #F5F0EC 0%, #EDE6E0 50%, #E8DED7 100%);
-    --gradient-accent: linear-gradient(135deg, #B8A99A 0%, #C9B8A8 50%, #C4A092 100%);
-    --gradient-warm: linear-gradient(135deg, #E5CFC5 0%, #C4A092 100%);
-    --gradient-video: linear-gradient(145deg, #4A3F3A 0%, #5E524C 50%, #7A6B64 100%);
+    --gradient-primary: linear-gradient(135deg, #ee9cbe, #be749d);
+    --gradient-card: linear-gradient(145deg,#FBF8F6 , #F7F2EF);
+    --gradient-button: linear-gradient(135deg, #f2a6b4, #e7926b );
+    --gradient-accent: linear-gradient(135deg, #f8bfcb, #ed6a8d);
+    --gradient-warm: linear-gradient(135deg, #f8cdd9, #f49cae);
+    --gradient-video: linear-gradient(145deg, #4a3a3e 0%, #5e4c52 50%, #7a646a 100%);
 
     /* Typography - Lora from Google Fonts */
     --font-primary: 'Lora', Georgia, serif;
@@ -133,17 +121,23 @@ p {
     margin-bottom: var(--spacing-sm);
 }
 
-/* ============================================
-   HEADER / NAVIGATION
-   ============================================ */
+
 .site-header {
-    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
-    background: var(--color-background);
-    padding: var(--spacing-md) 0;
+    background-color: transparent;
+    padding: 25px 0;
+}
+
+.site-header2 {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: var(--color-background);
+    padding: 25px 0;
 }
 
 .navbar {
@@ -184,7 +178,7 @@ p {
 }
 
 .nav-link:hover {
-    background: var(--gradient-card);
+
     color: var(--color-accent-dark) !important;
 }
 
@@ -235,21 +229,31 @@ p {
    HERO SECTION
    ============================================ */
 .hero-section {
-    min-height: 75vh;
+    height: 800px;
     display: flex;
     align-items: center;
-    padding-top: calc(var(--spacing-xl) + 80px);
+    padding-top: 400px;
     padding-bottom: var(--spacing-xl);
     background: var(--color-background);
+    background: linear-gradient(
+    to bottom left,
+    #e7e5e8 25%,
+    #f19c75 70%,
+    #ec9daa 100%)
+    ;
+    margin-top: -100px;
+    padding-left: 100px;
 }
 
 .hero-title {
-    font-size: clamp(2.2rem, 5vw, 3.5rem);
-    font-weight: 500;
+    align-items: center;
+    font-size: 70px;
+    font-weight: 300;
     line-height: 1.25;
-    margin-bottom: var(--spacing-md);
+    margin-bottom: 275px;
+     padding-right: -100px;
     letter-spacing: -0.01em;
-    color: var(--color-text);
+    color: black;
 }
 
 .hero-subtitle {
@@ -264,7 +268,7 @@ p {
    PAGE HERO (for Resume & Contact pages)
    ============================================ */
 .page-hero {
-    padding-top: calc(var(--spacing-xl) + 80px);
+    padding-top: -100px;
     padding-bottom: var(--spacing-lg);
     background: var(--color-background);
 }
@@ -303,13 +307,6 @@ section {
     color: var(--color-accent-dark);
 }
 
-.section-divider {
-    width: 60px;
-    height: 3px;
-    background: var(--gradient-primary);
-    margin-bottom: var(--spacing-lg);
-    border-radius: 2px;
-}
 
 /* ============================================
    SELECTED WORKS SECTION
@@ -699,9 +696,18 @@ section {
     transition: var(--transition-fast);
 }
 
+.social-link2 {
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: #ebcad3;
+    padding: ;
+    transition: var(--transition-fast);
+}
+
 .social-link:hover {
     background: var(--gradient-primary);
-    color: white;
+    color: #fde3eb;
     border-color: transparent;
 }
 
@@ -770,145 +776,7 @@ section {
     box-shadow: 0 6px 20px rgba(122, 155, 184, 0.4);
 }
 
-/* ============================================
-   FOOTER
-   ============================================ */
-.site-footer {
-    padding: var(--spacing-lg) 0;
-    background: var(--gradient-footer);
-    border-top: 1px solid var(--color-border);
-}
 
-.footer-text {
-    font-size: 0.85rem;
-    color: var(--color-text-light);
-    margin-bottom: 0;
-}
-
-/* ============================================
-   RESPONSIVE STYLES
-   ============================================ */
-
-/* Tablet */
-@media (max-width: 991px) {
-    .works-grid {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-md);
-    }
-
-    .hero-section {
-        min-height: 60vh;
-    }
-
-    .nav-item {
-        margin-left: 0;
-        margin-bottom: var(--spacing-xs);
-    }
-
-    .navbar-collapse {
-        padding-top: var(--spacing-md);
-        background: var(--color-background);
-        border-radius: var(--radius-md);
-        padding: var(--spacing-md);
-        margin-top: var(--spacing-sm);
-    }
-
-    .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--spacing-md);
-    }
-}
-
-/* Mobile */
-@media (max-width: 576px) {
-    :root {
-        --spacing-lg: 3rem;
-        --spacing-xl: 5rem;
-    }
-
-    h1 {
-        font-size: 2.2rem;
-    }
-
-    .hero-title {
-        font-size: 1.8rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1rem;
-    }
-
-    .page-title {
-        font-size: 1.8rem;
-    }
-
-    .contact-email {
-        font-size: 1.15rem;
-    }
-
-    .work-info {
-        padding: var(--spacing-sm);
-    }
-
-    .social-links {
-        flex-direction: column;
-        gap: var(--spacing-xs);
-    }
-
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .resume-item-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: var(--spacing-xs);
-    }
-
-    .contact-form-wrapper {
-        padding: var(--spacing-md);
-    }
-}
-
-/* ============================================
-   ANIMATIONS & EFFECTS
-   ============================================ */
-
-/* Fade in animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.fade-in {
-    animation: fadeIn 0.6s ease forwards;
-}
-
-/* Smooth reveal for work items */
-.work-item {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.work-item.revealed {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Loading state */
-body.loading * {
-    animation-duration: 0s !important;
-    transition-duration: 0s !important;
-}
-
-/* Gradient text animation on hover */
 .hero-title:hover,
 .page-title:hover {
     background: linear-gradient(135deg, #5A7A94 0%, #7A9BB8 50%, #A8C4D9 100%);
