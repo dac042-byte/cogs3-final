@@ -30,8 +30,8 @@
     --gradient-warm: linear-gradient(135deg, #f8cdd9, #f49cae);
     --gradient-video: linear-gradient(145deg, #4a3a3e 0%, #5e4c52 50%, #7a646a 100%);
 
-    /* Typography - Lora from Google Fonts */
-    --font-primary: 'Lora', Georgia, serif;
+    /* Typography - Bitcount from Google Fonts */
+    --font-primary: 'Bitcount Mono Single', monospace;
 
     /* Spacing */
     --spacing-xs: 0.5rem;
