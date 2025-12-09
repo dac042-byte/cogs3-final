@@ -25,8 +25,8 @@
     --gradient-button: linear-gradient(135deg, #7A9BB8 0%, #5A7A94 100%);
     --gradient-footer: linear-gradient(180deg, #E8EDF3 0%, #D1DAE3 100%);
 
-    /* Typography - Freight Pro from Adobe Fonts */
-    --font-primary: 'freight-text-pro', Georgia, serif;
+    /* Typography - Lora from Google Fonts */
+    --font-primary: 'Lora', Georgia, serif;
 
     /* Spacing */
     --spacing-xs: 0.5rem;
