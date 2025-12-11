@@ -180,6 +180,44 @@ p {
     color: white !important;
 }
 
+/* Mobile Toggle */
+.navbar-toggler {
+    border: none;
+    padding: 0;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    background-image: none;
+    width: 24px;
+    height: 2px;
+    background-color: var(--color-text);
+    position: relative;
+    display: block;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: var(--color-text);
+    left: 0;
+}
+
+.navbar-toggler-icon::before {
+    top: -7px;
+}
+
+.navbar-toggler-icon::after {
+    bottom: -7px;
+}
+
 /* ============================================
    HERO SECTION
    ============================================ */
@@ -760,4 +798,18 @@ section {
    ============================================ */
 .nav-link i {
     font-size: 1.2rem;
+}
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+@media (max-width: 768px) {
+    .project-images-grid {
+        gap: var(--spacing-md);
+    }
+
+    .works-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
 }
